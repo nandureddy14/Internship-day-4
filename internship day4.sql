@@ -3,7 +3,7 @@ use Internship_day_3
 
 select * from online_retail
 
--- Find country wise sum of Item Total and Average of UnitPrice
+--Country wise Total sales and average unitprice
 
 
 select Country, sum(ItemTotal) as Total_Sales, AVG(UnitPrice) as Avg_price 
@@ -29,7 +29,7 @@ group by Country, YEAR(InvoiceDate)
 
 
 
--- Customers who purchased more than 10 times
+--  Active Customers (More than 10 Purchases
 
 select CustomerID, count(InvoiceNo) No_of_purchases
 from online_retail
